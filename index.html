@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>PyCNN by ankitaggarwal011</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">PyCNN</h1>
+      <h2 class="project-tagline">Image Processing in Cellular Neural Networks with Python</h2>
+      <a href="https://github.com/ankitaggarwal011/PyCNN" class="btn">View on GitHub</a>
+      <a href="https://github.com/ankitaggarwal011/PyCNN/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ankitaggarwal011/PyCNN/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="pycnn-cellular-neural-networks-image-processing-python-library" class="anchor" href="#pycnn-cellular-neural-networks-image-processing-python-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCNN: Cellular Neural Networks Image Processing Python Library</h1>
+
+<p><strong>Cellular Neural Networks (CNN)</strong> are a parallel computing paradigm similar to neural networks, with the difference that communication is allowed between neighboring units only. Image Processing is one of its application. CNN processors were designed to perform image processing; specifically, the original application of CNN processors was to perform real-time ultra-high frame-rate (&gt;10,000 frame/s) processing unachievable by digital processors.</p>
+
+<p>This python library is the implementation of CNN for the application of <strong>Image Processing</strong>.</p>
+
+<p><img src="http://www.isiweb.ee.ethz.ch/haenggi/CNN_web/CNN_figures/blockdiagram.gif" alt="alt text" title="CNN Architecture"></p>
+
+<h2>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h2>
+
+<p>This is an extension of a demo at 14th Cellular Nanoscale Networks and Applications (CNNA) Conference 2014. I have written a blog post, available at <a href="http://blog.ankitaggarwal.me/technology/image-processing-with-cellular-neural-networks-using-python-on-raspberry-pi/">Image Processing in CNN with Python on Raspberry Pi</a>.</p>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<p>The python modules are needed in order to use this library.</p>
+
+<pre><code>Image
+Scipy
+Numpy
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><em>Image Processing</em> using CNN is simple using this library, just clone the repository and use the following code.</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">from</span> cnnimg <span class="pl-k">import</span> cnn
+cnn.edgedetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output1.png<span class="pl-pds">'</span></span>)
+cnn.grayscaleedgedetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output2.png<span class="pl-pds">'</span></span>)
+cnn.cornerdetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output3.png<span class="pl-pds">'</span></span>)
+cnn.diagonallinedetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output4.png<span class="pl-pds">'</span></span>)
+cnn.inversion(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output5.png<span class="pl-pds">'</span></span>)
+cnn.generaltemplates(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output6.png<span class="pl-pds">'</span></span>)</pre></div>
+
+<h4>
+<a id="or" class="anchor" href="#or" aria-hidden="true"><span class="octicon octicon-link"></span></a>OR</h4>
+
+<p>Use example.py available with the repository.</p>
+
+<div class="highlight highlight-sh"><pre>$ python example.py</pre></div>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">from</span> cnnimg <span class="pl-k">import</span> cnn</pre></div>
+
+<p>Import the module in your main file.</p>
+
+<h4>
+<a id="cnnedgedetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnnedgedetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.edgedetection(inputimagelocation, outputimagelocation)</h4>
+
+<p>Function for edge detection using CNN on a given image.</p>
+
+<h4>
+<a id="cnngrayscaleedgedetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnngrayscaleedgedetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.grayscaleedgedetection(inputimagelocation, outputimagelocation)</h4>
+
+<p>Function for grayscale edge detection using CNN on a given image.</p>
+
+<h4>
+<a id="cnncornerdetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnncornerdetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.cornerdetection(inputimagelocation, outputimagelocation)</h4>
+
+<p>Function for corner detection using CNN on a given image.</p>
+
+<h4>
+<a id="cnndiagonallinedetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnndiagonallinedetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.diagonallinedetection(inputimagelocation, outputimagelocation)</h4>
+
+<p>Function for diagonal line detection using CNN on a given image.</p>
+
+<h4>
+<a id="cnninversioninputimagelocation-outputimagelocation" class="anchor" href="#cnninversioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.inversion(inputimagelocation, outputimagelocation)</h4>
+
+<p>Function for invert an image using CNN.</p>
+
+<h4>
+<a id="cnngeneraltemplatesinputimagelocation-outputimagelocation" class="anchor" href="#cnngeneraltemplatesinputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.generaltemplates(inputimagelocation, outputimagelocation)</h4>
+
+<p>Function for applying general CNN templates on a given image.</p>
+
+<h4>
+<a id="inputimagelocation-is-the-location-of-the-input-image-type-string" class="anchor" href="#inputimagelocation-is-the-location-of-the-input-image-type-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>inputimagelocation is the location of the input image, Type: String.</h4>
+
+<h4>
+<a id="outputimagelocation-is-the-location-of-the-output-image-type-string" class="anchor" href="#outputimagelocation-is-the-location-of-the-output-image-type-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>outputimagelocation is the location of the output image, Type: String.</h4>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<h4>
+<a id="author-ankit-aggarwal" class="anchor" href="#author-ankit-aggarwal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author: Ankit Aggarwal</h4>
+
+<p>If anybody is interested in working on developing this library, fork and feel free to get in touch with me.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="https://github.com/ankitaggarwal011/CNN-Image-Processing/blob/master/LICENSE">MIT License</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ankitaggarwal011/PyCNN">PyCNN</a> is maintained by <a href="https://github.com/ankitaggarwal011">ankitaggarwal011</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-59109394-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
+
