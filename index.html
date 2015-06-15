@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>PyCNN</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">PyCNN</h1>
-      <h2 class="project-tagline">Image Processing in Cellular Neural Networks with Python</h2>
-      <a href="https://github.com/ankitaggarwal011/PyCNN" class="btn">View on GitHub</a>
-      <a href="https://github.com/ankitaggarwal011/PyCNN/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/ankitaggarwal011/PyCNN/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <section class="main-content">
-      <h1>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>PyCNN by ankitaggarwal011</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>PyCNN</h1>
+        <h2>Image Processing in Cellular Neural Networks with Python</h2>
+        <a href="https://github.com/ankitaggarwal011/PyCNN" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="pycnn-cellular-neural-networks-image-processing-python-library" class="anchor" href="#pycnn-cellular-neural-networks-image-processing-python-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCNN: Cellular Neural Networks Image Processing Python Library</h1>
 
 <p><strong>Cellular Neural Networks (CNN)</strong> are a parallel computing paradigm similar to neural networks, with the difference that communication is allowed between neighboring units only. Image Processing is one of its application. CNN processors were designed to perform image processing; specifically, the original application of CNN processors was to perform real-time ultra-high frame-rate (&gt;10,000 frame/s) processing unachievable by digital processors.</p>
@@ -62,6 +71,50 @@ cnn.generaltemplates(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<s
 <p>Use example.py available with the repository.</p>
 
 <div class="highlight highlight-sh"><pre>$ python example.py</pre></div>
+
+<h2>
+<a id="example-results" class="anchor" href="#example-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example results</h2>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/input.bmp" alt="">
+<em>Input: input.bmp</em></p>
+
+<p><strong>Edge Detection:</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output1.png" alt="">
+<em>Output: output1.png</em></p>
+
+<p><strong>Corner Detection:</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output3.png" alt="">
+<em>Output: output3.png</em></p>
+
+<p><strong>Diagonal line Detection:</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output4.png" alt="">
+<em>Output: output4.png</em></p>
+
+<p><strong>Inversion (Logic NOT):</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output5.png" alt="">
+<em>Output: output5.png</em></p>
+
+<h2>
+<a id="another-example-lenna" class="anchor" href="#another-example-lenna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Another example (Lenna)</h2>
+
+<p>Here, the input is the popular face in image processing field, Lenna.</p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna.gif" alt="">
+<em>Input: lenna.gif</em></p>
+
+<p><strong>Edge Detection:</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna_edge.png" alt="">
+<em>Output: lenna_edge.png</em></p>
+
+<p><strong>Diagonal line Detection:</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna_diagonal.png" alt="">
+<em>Output: lenna_diagonal.png</em></p>
 
 <h2>
 <a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
@@ -118,13 +171,24 @@ cnn.generaltemplates(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<s
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p><a href="https://github.com/ankitaggarwal011/CNN-Image-Processing/blob/master/LICENSE">MIT License</a></p>
+        </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/ankitaggarwal011/PyCNN">PyCNN</a> is maintained by <a href="https://github.com/ankitaggarwal011">ankitaggarwal011</a>.</span>
+        <aside id="sidebar">
+          <a href="https://github.com/ankitaggarwal011/PyCNN/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ankitaggarwal011/PyCNN/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-      </footer>
+          <p class="repo-owner"><a href="https://github.com/ankitaggarwal011/PyCNN"></a> is maintained by <a href="https://github.com/ankitaggarwal011">ankitaggarwal011</a>.</p>
 
-    </section>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
             <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -139,4 +203,3 @@ cnn.generaltemplates(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<s
 
   </body>
 </html>
-
