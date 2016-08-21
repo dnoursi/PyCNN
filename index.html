@@ -22,11 +22,12 @@
       <h1>
 <a id="pycnn-cellular-neural-networks-image-processing-python-library" class="anchor" href="#pycnn-cellular-neural-networks-image-processing-python-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyCNN: Cellular Neural Networks Image Processing Python Library</h1>
 
-<p><strong>Cellular Neural Networks (CNN)</strong> are a parallel computing paradigm similar to neural networks, with the difference that communication is allowed between neighboring units only. Image Processing is one of its application. CNN processors were designed to perform image processing; specifically, the original application of CNN processors was to perform real-time ultra-high frame-rate (&gt;10,000 frame/s) processing unachievable by digital processors.</p>
-
+<p><strong>Cellular Neural Networks (CNN)</strong> <a href="https://en.wikipedia.org/wiki/Cellular_neural_network">[wikipedia]</a> <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7600">[paper]</a> are a parallel computing paradigm that was first proposed in 1988. Cellular neural networks are similar to neural networks, with the difference that communication is allowed only between neighboring units. Image Processing is one of its <a href="https://en.wikipedia.org/wiki/Cellular_neural_network#Applications">applications</a>. CNN processors were designed to perform image processing; specifically, the original application of CNN processors was to perform real-time ultra-high frame-rate (&gt;10,000 frame/s) processing unachievable by digital processors.</p>
 <p>This python library is the implementation of CNN for the application of <strong>Image Processing</strong>.</p>
-
+<p><strong>Note</strong>: The library has been <strong>cited</strong> in the research published on <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7168488">Using Python and Julia for Efficient Implementation of Natural Computing and Complexity Related Algorithms</a>, look for the reference #19 in the references section. I’m glad that this library could be of help to the community.</p>
+<p><strong>Note</strong>: Cellular neural network (CNN) must not be confused with completely different Convolutional neural network (ConvNet).</p>
 <p><img src="http://www.isiweb.ee.ethz.ch/haenggi/CNN_web/CNN_figures/blockdiagram.gif" alt="alt text" title="CNN Architecture"></p>
+<p>As shown in the above diagram, imagine a control system with a feedback loop. f(x) is the sigmoidal kernel function for this system. The control and the feedback templates (coefficients) are configurable and controls the output of the system. Significant research had been done in determining the templates for common image processing techniques, these templates are published in this <a href="http://cnn-technology.itk.ppke.hu/Template_library_v4.0alpha1.pdf">Template Library</a>.</p>
 
 <h2>
 <a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h2>
