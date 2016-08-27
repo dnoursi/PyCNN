@@ -148,6 +148,21 @@ class cnnimg:
         print("Inversion of image "+ inputlocation +" is complete and saved at " + outputlocation + '\n')
         return
 
+    ## implemented on fork
+    def circularCurveDetection(self, inputlocation = "", outputlocation = "output.png"):
+        if not self.isvalid(inputlocation):
+            print("Invalid Location. Please try again ... ")
+            exit()
+        print("Given templates application is initialized ... ")
+        tempA = np.array([[0.0, 0.0, 0.0], [0.0,1.0, 0.0], [0.0, 0.0, 0.0]]) 
+        tempB = np.array([[0.0, 0.0, 0.0], [1.0, 1.0, 1.0], [0.0, 0.0, 0.0]]) 
+        Ib = -3.0
+        t = np.linspace(0, 10.0, num=100)
+        initialcondition = 0.0
+        self.imageprocessing(inputlocation, outputlocation, tempA, tempB, initialcondition, Ib, t)
+        print("Given templates applied to image "+ inputlocation +" is complete and saved at " + outputlocation + '\n')
+        return
+    
     ## general method with functionality to give template as an input
     def generaltemplates(self, inputlocation = "", outputlocation = "output.png", tempA_A = [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]], tempB_B = [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]], initialcondition = 0.0, Ib_b = 0.0, t = np.linspace(0, 10.0, num=2)):
         if not self.isvalid(inputlocation):
